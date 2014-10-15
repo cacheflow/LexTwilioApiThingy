@@ -1,0 +1,21 @@
+
+<%= form_for @call do |f| %>
+  <ul>
+    <% @call.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+
+  <p>
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </p>
+
+
+  <p>
+    <%= f.submit  %> 
+  </p>
+
+
+
+<% end %>
