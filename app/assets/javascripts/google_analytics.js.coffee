@@ -42,5 +42,5 @@ $(document).on 'page:change', ->
   pageTracker._trackPageview()
 
   @analyticsId: ->
-  		"'UA-55764288-1"
+               "UA-55764288-1"
 GoogleAnalytics.load()
