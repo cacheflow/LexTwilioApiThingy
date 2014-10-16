@@ -5,3 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+mess = Message.create([{content: "Hello again kind sir", name: "Morrison", number: "6266443347"}, {content: "Yes sir", name: "Timothy Howard", number: "6266443347"}, {content: "Food is fantastic", name: "This is amazing", number: "6266443347"}  ])

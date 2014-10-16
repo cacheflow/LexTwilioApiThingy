@@ -7,13 +7,20 @@
   <%= csrf_meta_tags %>
 
 
-<script type="text/javascript">
-GoogleAnalytics.trackPageview()
-</script>
 
 <body>
 
+
+ 
 <%= yield %>
+
+
+<footer>
+
+<%= render partial : "layouts/footer" %>
+<%= yield %> 
+</footer>
+
 
 </body>
 </html>

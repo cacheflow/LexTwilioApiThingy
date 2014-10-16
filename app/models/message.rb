@@ -22,6 +22,13 @@ class Message < ActiveRecord::Base
 		 
 	end
 
+	def voice 
+		response = Twilio::TwiML::Response.new do |r| 
+			r.Say "Hello Lex"
+		end 
+		render_twiml resposne 
+	end 
+
 
 	
 	 
