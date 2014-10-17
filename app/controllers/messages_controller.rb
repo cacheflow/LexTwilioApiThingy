@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
 		@message = Message.new(message_params)
 		if @message.save
 			@message.send_text
-		redirect_to messages_path(@message)
+		redirect_to root_path 
 		else 
 		render "new"
 		end

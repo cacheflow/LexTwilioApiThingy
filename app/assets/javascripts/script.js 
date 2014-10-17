@@ -1,0 +1,7 @@
+$(document).on 'page:change', function() {
+ if (window._gaq != null) {
+    return_gaq.push(['_trackEvent']);
+    }else if (window.pageTracker != null){
+      return pageTracker._trackEvent();
+      }
+      });
