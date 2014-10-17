@@ -35,11 +35,7 @@ class @GoogleAnalytics
   @documentDomainIncludes: (str) ->
     document.domain.indexOf(str) isnt -1
 
-$(document).on 'page:change', ->
- if window._gaq?
-  _gaq.push ['_trackPageview']
- else if window.pageTracker?
-  pageTracker._trackPageview()
+
 
   @analyticsId: ->
                "UA-55764288-1"

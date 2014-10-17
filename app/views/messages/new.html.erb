@@ -1,31 +1,9 @@
+<div id = "form">
+<%= bootstrap_form_for @message do |m| %> 
+	<%= m.text_field :content, class: "form-control"%> 
+	<%= m.text_field :name,  class: "form-control" %> 
+	<%= m.text_field :number, class: "form-control" %> 
+	<%=m.submit class: "btn btn-info" %> 
 
-<%= form_for @message do |f| %>
-  <ul>
-    <% @message.errors.full_messages.each do |error| %>
-      <li><%= error %></li>
-    <% end %>
-  </ul>
-
-  <p>
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
-  </p>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <%= f.label :number %><br />
-    <%= f.text_field :number %>
-  </p>
-
-
-  <p>
-    <%= f.submit  %> 
-  </p>
-
-
-
-<% end %>
-
+	<% end %> 
+</div>

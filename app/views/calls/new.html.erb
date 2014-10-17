@@ -1,10 +1,9 @@
+<div class = "form">
 
-<%= form_for @call do |f| %>
-  <ul>
+<%= bootstrap_form_for @call do |f| %>
     <% @call.errors.full_messages.each do |error| %>
-      <li><%= error %></li>
+      <%= end %> 
     <% end %>
-  </ul>
 
   <p>
     <%= f.label :number %><br />
