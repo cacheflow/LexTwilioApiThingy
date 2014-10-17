@@ -1,9 +1,0 @@
-var checkThis = document.getElementById("form");
-addListener(checkThis, "click", function() {
-ga("send", "event", "button", "click", "nav-buttons");
-});
-
-function addListener(element, type, callback) {
-	if (element.addEventListener) element.addEventListener(type, callback)
-		else if (element.attachEvent) element.attachEvent("on" + type, callback);
-}
