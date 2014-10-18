@@ -1,10 +1,19 @@
-<div id = "form">
 <%= bootstrap_form_for @message do |m| %> 
 	<%= m.text_field :content, class: "form-control"%> 
 	<%= m.text_field :name,  class: "form-control" %> 
 	<%= m.text_field :number, class: "form-control" %> 
-	<div id = "message_button">   <%=m.submit class: "btn btn-info"   %> </div>
+	   <%=m.submit class: "btn btn-info", id: "message_button"  %> 
 
 	<% end %> 
-</div>
 
+<script type="text/javascript">
+
+
+$("#message_button").on("click", function() {
+	ga("send", "event", "message", "click")
+
+
+});
+
+
+</script>

@@ -35,28 +35,15 @@
   ga('create', 'UA-55764288-1', 'auto');
   ga('send', 'pageview');
 
-</script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-$("#message_button").click(function(){
-
-
-	ga("send", "event", "Messages", "Sent");
+$("#message_button").on("click", function() {
+	ga("send", "event", "message", "click")
 
 
 });
 
-
-
-}); 
-
-
-
-
-
-
 </script>
+
+
 </footer>
 
 </html>
