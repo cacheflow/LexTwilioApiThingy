@@ -18,21 +18,21 @@ module App1
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-    config.before_configuration do 
-        ## so we iterate through the file directory below
-        env_file = File.join(Rails.root, "config", "keys.yml")
-           ## The line below loads the actual keys.yml file that 
-           # we reference above  
-        YAML.load(File.open(env_file)).each do |key, value|
-            ##then we iterate through the actual file
-            ENV[key.to_s] = value 
-            # so this then takes the word we have for the value 
-            # and converts it to a string and lets you mask it as a 
-            # name representing the actual value 
-        end if File.exists?(env_file)
-            # then we say right here if the file exists then stop running 
-            # and setting env variables.
-    end  
+    # config.before_configuration do 
+    #     ## so we iterate through the file directory below
+    #     env_file = File.join(Rails.root, "config", "keys.yml")
+    #        ## The line below loads the actual keys.yml file that 
+    #        # we reference above  
+    #     YAML.load(File.open(env_file)).each do |key, value|
+    #         ##then we iterate through the actual file
+    #         ENV[key.to_s] = value 
+    #         # so this then takes the word we have for the value 
+    #         # and converts it to a string and lets you mask it as a 
+    #         # name representing the actual value 
+    #     end if File.exists?(env_file)
+    #         # then we say right here if the file exists then stop running 
+    #         # and setting env variables.
+    # end  
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
